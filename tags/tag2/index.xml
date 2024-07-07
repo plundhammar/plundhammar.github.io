@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tag2 on plundhammar</title>
-    <link>http://localhost:1313/tags/tag2/</link>
+    <link>https://plundhammar@github.io/tags/tag2/</link>
     <description>Recent content in Tag2 on plundhammar</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Jul 2024 10:17:42 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://plundhammar@github.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This is a blog post</title>
-      <link>http://localhost:1313/posts/mypost/</link>
+      <link>https://plundhammar@github.io/posts/mypost/</link>
       <pubDate>Sun, 07 Jul 2024 10:17:42 +0200</pubDate>
-      <guid>http://localhost:1313/posts/mypost/</guid>
+      <guid>https://plundhammar@github.io/posts/mypost/</guid>
       <description>Some MarkDown text. test and some test.
 $$ \int_0^{\infty} e^{-x^2}\textrm{d}x $$</description>
     </item>
