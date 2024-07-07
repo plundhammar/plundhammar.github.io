@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Image reconstruction by LM-MLEM | plundhammar</title>
+<meta name="keywords" content="Image Reconstruction, Analytical Methods, Mathematics, Physics">
+<meta name="description" content="Litterature: Mainly based on:
+Voichita Maxim et al (2016) Probabilistic models and numerical calculation of system matrix and sensitivity in list-mode MLEM 3D reconstruction of Compton camera images Phys.Med.Biol. 61 243
+Uncertainty distribution in measurements
+Ordonez et al (1997) Ordonez C E, Bolozdynya A and Chang W 1997 Dependence of angular uncertainties on the energy resolution of Compton cameras IEEE Nuclear Science Symp. vol 2
+LM-MLEM
+Wilderman et al (1998) Wilderman S J, Clinthorne N, Fessler J A and Rogers W L 1998a List-mode maximum likelihood reconstruction of Compton scatter camera images in nuclear medicine Nuclear Science Symp.">
+<meta name="author" content="">
+<link rel="canonical" href="https://plundhammar.github.io/posts/image_reconstruction_by_lm-mlem_analytical_method/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://plundhammar.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://plundhammar.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://plundhammar.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://plundhammar.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://plundhammar.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://plundhammar.github.io/posts/image_reconstruction_by_lm-mlem_analytical_method/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false}
+        ]
+    });
+});
+</script>
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://plundhammar.github.io/" accesskey="h" title="plundhammar (Alt + H)">plundhammar</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://plundhammar.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://plundhammar.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://plundhammar.github.io/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://plundhammar.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Image reconstruction by LM-MLEM
+    </h1>
+    <div class="post-meta"><span title='2024-07-07 14:17:04 +0200 CEST'>July 7, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="litterature">Litterature:<a hidden class="anchor" aria-hidden="true" href="#litterature">#</a></h3>
+<p><strong>Mainly based on:</strong></p>
+<ul>
+<li>Voichita Maxim <em>et al</em> (2016)</li>
+</ul>
+<p>Probabilistic models and numerical calculation of system matrix and sensitivity in list-mode MLEM 3D reconstruction of Compton camera images Phys.Med.Biol. 61 243</p>
+<p><strong>Uncertainty distribution in measurements</strong></p>
+<ul>
+<li>Ordonez <em>et al</em> (1997)</li>
+</ul>
+<p>Ordonez C E, Bolozdynya A and Chang W 1997 Dependence of angular uncertainties on the energy resolution of Compton cameras IEEE Nuclear Science Symp. vol 2</p>
+<p><strong>LM-MLEM</strong></p>
+<ul>
+<li>Wilderman <em>et al</em> (1998)</li>
+</ul>
+<p>Wilderman  S J, Clinthorne  N, Fessler  J A and Rogers  W L 1998a List-mode maximum likelihood reconstruction of Compton scatter camera images in nuclear medicine Nuclear Science Symp. Conf. Rec. 3 1716–20
+<!-- raw HTML omitted --></p>
+<ul>
+<li>Dempster <em>et al</em> (1977)</li>
+</ul>
+<p>Dempster A P, Laird N M and Rubin D B 1977 Maximum likelihood from incomplete data via the EM algorithm J. R. Stat. Soc. B 39 1–38
+<!-- raw HTML omitted --></p>
+<ul>
+<li>Lange Carson (1984)</li>
+</ul>
+<p>Lange K and Carson R 1984 EM reconstruction algorithms for emission and transmission tomography J. Comput. Assist. Tomogr. 8 306–16
+<!-- raw HTML omitted --></p>
+<ul>
+<li>Shepp and Vardi (1982)</li>
+</ul>
+<p>Shepp L and Vardi Y 1982 Maximum likelihood reconstruction for emission tomography IEEE Trans. Med. Imaging 1 113–22</p>
+<hr>
+<h2 id="list-mode-maximum-likelihood-expectation-maximization-lm-mlem">List-Mode Maximum Likelihood Expectation Maximization (LM-MLEM)<a hidden class="anchor" aria-hidden="true" href="#list-mode-maximum-likelihood-expectation-maximization-lm-mlem">#</a></h2>
+<p>Let $\lambda$ be the mean and variance of the Poisson distribution of some source. The following sequence converges to $\lambda$:</p>
+<p>$$
+\widehat{\lambda}_j^{l+1} = \frac{\widehat{\lambda}_j^{(l)}}{s_j}\sum_{i=1}^N  t_{ij}\frac{1}{p_i^{(l)}}
+\text{ with } p_i^{(l)} = \sum_{k=1}^M t_{ik} \widehat{\lambda}^{(l)}_k
+$$
+where</p>
+<ul>
+<li>$t_{ij}$ are elements of the system matrix, indexed on the events $i$ and voxels $j$;</li>
+<li>$s_j=\sum_i t_{ij}$is the sensitivity correction.</li>
+</ul>
+<p>The initialization step consist in calculating $\widehat{\lambda}^{(0)}$, generally as the back-projection in the image volume of the $N$ events.</p>
+<hr>
+<h2 id="probabilistic-model-of-the-system-matrix">Probabilistic Model of the System Matrix<a hidden class="anchor" aria-hidden="true" href="#probabilistic-model-of-the-system-matrix">#</a></h2>
+<p>Let $x$ be the vector of coordinates of a point $M$ from the source. The probability of occurrence of the measured event $y$ given that $\mathfrak{p}$ was emitted at $x$ is given by the Chapman–Kolmogorov equation
+\begin{equation}
+p_{Y:X}(y:x,E_0) = \int p_{Y:\tilde{Y}}(y:\tilde{y},E_0)p_{\tilde{Y}:X}(\tilde{y}:x,E_0)\textrm{d}\tilde{y}.
+\end{equation}
+We will now argue for what proberties the two probability distributions</p>
+<!-- raw HTML omitted -->
+<hr>
+<p>Considering $p_{Y:\tilde{Y}}(y:\tilde{y},E_0)$, this distribution could be summerized to have the task of answering the following question:</p>
+<ul>
+<li>How likely is it that the measured event $y$ was registred given that the real event $\tilde{y}$ happend?</li>
+</ul>
+<p>Since the measurement is based on the measurement and real event of the position in the first and second scatterer, as well as the measurement and real event of the scattering angle which we may assume to be independent we have</p>
+<p>$$
+p_{Y:\tilde{Y}}(y:\tilde{y},E_0) =p_{V_1:\tilde{V}_1}(V_1:\tilde{V_1},E_0)p_{V_2:\tilde{V}_2}(V_2:\tilde{V}_2,E_0)p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta},E_0).
+$$
+The terms $p_{V_i:\tilde{V}_i}(V_i:\tilde{V_i},E_0)$ depends on the spatial resolution of the detector and something that we may impose depending on the detector design. The term $p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta},E_0)$ depends on the energy resolution of the detectors, since the measured scattering angle $\beta$ is calculated through an energy dependent relation (Compton scattering with additional corrections perhaps).</p>
+<hr>
+<p>Now considering $p_{\tilde{Y}:X}(\tilde{y}:x,E_0)$, it is the product of several probabilities:</p>
+<ul>
+<li>The probability of the Compton scattering process (including Doppler-broadening);</li>
+<li>Absorption probabilities (in the different environments such as the object, air, absorption of the scattered photon in the scatter detector);</li>
+<li>The absorption probability of the photon in the absorber;</li>
+<li>The solid angle subtended at the origin of the particle $M$ by the detector element containing the first hit, <strong>which should be considered in 3D since the emission is isotropic</strong>, and on the solid angle subtended at the position of the first hit by the detector element where the second hit takes place, <strong>which should be considered in 2D since it is related to a cone surface uncertainty through the scattering angle</strong>.</li>
+</ul>
+<hr>
+<p>The probability of the Compton scattering process is proportional to the Compton scattering cross-section given by the Klein-Nishima distribution, denoted $K(\tilde{\beta}:E_0)$ at energy $E_0$.</p>
+<p>The absorption probabilities has been discussed previously in</p>
+<ul>
+<li>Wilderman <em>et al</em> 1998a</li>
+<li>Parra 2000</li>
+</ul>
+<hr>
+<p>I general a solid angle considered in 3D may be written $A/r^2$ where $A$ is the sector of the sphere of radius $r$ that the half-angle covers. Similarly, in 2D it may be written $A/r$ with the same definition. So, the solid angle subtended at the origin of the particle at $M$ can be written
+$$
+\frac{1}{\tilde{V}_1M^2}\int_{S_{\tilde{V}_1M}}\textrm{d}S\propto \frac{1}{\tilde{V}_1M^2}\int_{-\theta_{\tilde{V}_1M^2}}^{\theta_{\tilde{V}_1M^2}}\sin(\theta)\textrm{d}\theta \propto \frac{\cos(\theta_{\tilde{V}_1M})}{\tilde{V}_1M^2}.
+$$</p>
+<p>Similarly, the solid angle subtended at the position of the first hit by the detector element where the second hit takes place is proportional to
+$$
+\frac{\cos(\theta_{\tilde{V}_1\tilde{V}_2})}{\tilde{V}_1\tilde{V}_2},
+$$
+since we now consider it in 2D.</p>
+<hr>
+<p>Ignoring absorption probabilities, we can now write
+$$
+p_{\tilde{Y}:X}(\tilde{y}:x,E_0)\propto K(\tilde{\beta}:E_0)\frac{\cos(\theta_{\tilde{V}_1M})}{\tilde{V}_1M^2}\frac{\cos(\theta_{\tilde{V}_1\tilde{V}_2})}{\tilde{V}_1\tilde{V}_2}
+$$</p>
+<p>If the real positions are known (there in reality unobserable) $\tilde{\beta}$ can be calculated geometrically, let $\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}$ denote the geometrically obtained scattering angle. This may be estimated by measured values of the deposed energies and incident energy of the incident photon by
+$$
+\cos(\beta) = 1 - \frac{m_e c^2E_1}{E_0(E_0-E_1)}
+$$
+with $m_ec^2$ begin the mass energy of the electron.</p>
+<p>Inserting these probabilities and integrating results in
+$$
+\begin{aligned}
+p_{Y:X}(y:x,E_0) =&amp; \int p_{Y:\tilde{Y}}(y:\tilde{y},E_0)p_{\tilde{Y}:X}(\tilde{y}:x,E_0)\textrm{d}\tilde{y}\\
+=&amp;\int_{\mathbb{R}^3}\frac{\cos(\theta_{\tilde{V}_1M})}{\tilde{V}_1M^2}p_{V_1:\tilde{V}_1}(V_1:\tilde{V_1},E_0)\\
+\times &amp; \int_{\mathbb{R}^3}\frac{\cos(\theta_{\tilde{V}_1\tilde{V}_2})}{\tilde{V}_1\tilde{V}_2}p_{V_2:\tilde{V}_2}(V_2:\tilde{V}_2,E_0)\\
+\times &amp; K(\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}:E_0)p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M},E_0)\textrm{d}\tilde{V}_2\textrm{d}\tilde{V}_1
+\end{aligned}
+$$</p>
+<p>We will assume that the uncertainty on the direction of the Compton cone axis may be considered as negligible compared to the uncertainty of the measured Compton scattering angle. Consequently, the real and measured points where $\mathfrak{p}$ hits the detector may be merged, leading to the simplified formulation:
+$$
+p_{Y:X}(y:x,E_0) =\frac{\cos(\theta_{{V}_1M})}{{V}_1M^2}\frac{\cos(\theta_{{V}_1{V}_2})}{{V}_1{V}_2}K(\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}:E_0)p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M},E_0)
+$$</p>
+<p>The element $t_{ij}$ of the system matrix $T$ is defined as:</p>
+<!-- raw HTML omitted -->
+<p>With the expression for $p_{Y_i:X}(y_i:x,E_0)$ we get
+$$
+t_{ij}= \frac{1}{\textrm{vol}(v_j)}\frac{\cos(\theta_{{V}_1{V}_2})}{{V}_1{V}_2}\int_{v_j}  \frac{\cos(\theta_{{V}_1M})}{{V}_1M^2}K(\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}:E_0)p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M},E_0)\textrm{d}x
+$$</p>
+<p>The only remaining thing is to model the probability $p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M},E_0)$, which describes the uncertainty of the measurement of the scattering angle, $\beta$. For an ideal detector this probability would be
+$$
+p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M},E_0) = \delta(\beta-\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}).
+$$
+For a finite resolution detector, a convenient choice may be the Gaussian distribution with mean $\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}$ and standard deviation $\sigma_{\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}}$,
+$$
+p_{\beta:\tilde{\beta}}(\beta:\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M},E_0) = \frac{1}{\sigma_{\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}} \sqrt{2\pi}}\exp\left[\frac{(\beta-\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M})^2}{2\sigma^2_{\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}}}\right].
+$$
+The unknown mean $\tilde{\beta}_{\tilde{V}_1,\tilde{V}_2,M}$ may be replaced by the measured value $\beta$. The standard deviation can be calculated frm the knwn detector uncertainties $\sigma_{\tilde{E}_1}$ and $\sigma_{\tilde{E}_2}$ as:
+$$
+\sigma_{\tilde{\beta}} = \frac{m_ec^2}{E_0^2\sin(\tilde{\beta})}\sqrt{\sigma_{\tilde{E}_1}^2+\frac{\tilde{E}_1^2(\tilde{E}_2+E_0)^2}{\tilde{E}_2^4}\sigma_{\tilde{E}_2}^2}
+$$</p>
+<p>It may be seen from the iterative equation above that the factor multiplying the integral in the equation for the system matrix element gets canceled in the iterative reconstruction process and may thus be ignored.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://plundhammar.github.io/tags/image-reconstruction/">Image Reconstruction</a></li>
+      <li><a href="https://plundhammar.github.io/tags/analytical-methods/">Analytical Methods</a></li>
+      <li><a href="https://plundhammar.github.io/tags/mathematics/">Mathematics</a></li>
+      <li><a href="https://plundhammar.github.io/tags/physics/">Physics</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://plundhammar.github.io/">plundhammar</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
