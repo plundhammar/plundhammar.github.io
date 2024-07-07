@@ -2,17 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on plundhammar blog</title>
-    <link>https://plundhammar.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on plundhammar blog</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2024 10:17:42 +0200</lastBuildDate>
-    <atom:link href="https://plundhammar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jul 2024 11:48:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second_post</title>
+      <link>http://localhost:1313/posts/second_post/</link>
+      <pubDate>Sun, 07 Jul 2024 11:48:23 +0200</pubDate>
+      <guid>http://localhost:1313/posts/second_post/</guid>
+      <description>This is my second post, something new. Testing the workflow&amp;hellip;
+Some new equations:
+$$ \lambda = \widehat{\lambda}\times \mathbb{R} $$</description>
+    </item>
     <item>
       <title>This is a blog post</title>
-      <link>https://plundhammar.github.io/posts/mypost/</link>
+      <link>http://localhost:1313/posts/mypost/</link>
       <pubDate>Sun, 07 Jul 2024 10:17:42 +0200</pubDate>
-      <guid>https://plundhammar.github.io/posts/mypost/</guid>
+      <guid>http://localhost:1313/posts/mypost/</guid>
       <description>Some MarkDown text. test and some test.
 $$ \int_0^{infty} e^{-x^2}\textrm{d}x $$</description>
     </item>
