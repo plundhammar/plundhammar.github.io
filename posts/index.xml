@@ -6,8 +6,15 @@
     <description>Recent content in Posts on plundhammar blog</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2024 11:48:23 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2024 11:58:04 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Third_post</title>
+      <link>http://localhost:1313/posts/third_post/</link>
+      <pubDate>Sun, 07 Jul 2024 11:58:04 +0200</pubDate>
+      <guid>http://localhost:1313/posts/third_post/</guid>
+      <description>$$ \mathfrak{p} $$ just a test&amp;hellip;</description>
+    </item>
     <item>
       <title>Second_post</title>
       <link>http://localhost:1313/posts/second_post/</link>
@@ -23,7 +30,7 @@ $$ \lambda = \widehat{\lambda}\times \mathbb{R} $$</description>
       <pubDate>Sun, 07 Jul 2024 10:17:42 +0200</pubDate>
       <guid>http://localhost:1313/posts/mypost/</guid>
       <description>Some MarkDown text. test and some test.
-$$ \int_0^{infty} e^{-x^2}\textrm{d}x $$</description>
+$$ \int_0^{\infty} e^{-x^2}\textrm{d}x $$</description>
     </item>
   </channel>
 </rss>
