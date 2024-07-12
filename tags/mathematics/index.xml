@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mathematics on plundhammar</title>
-    <link>https://plundhammar.github.io/tags/mathematics/</link>
+    <link>http://localhost:1313/tags/mathematics/</link>
     <description>Recent content in Mathematics on plundhammar</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Jul 2024 14:17:04 +0200</lastBuildDate>
-    <atom:link href="https://plundhammar.github.io/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image reconstruction by LM-MLEM</title>
-      <link>https://plundhammar.github.io/posts/image_reconstruction_by_lm-mlem_analytical_method/</link>
+      <link>http://localhost:1313/posts/image_reconstruction_by_lm-mlem_analytical_method/</link>
       <pubDate>Sun, 07 Jul 2024 14:17:04 +0200</pubDate>
-      <guid>https://plundhammar.github.io/posts/image_reconstruction_by_lm-mlem_analytical_method/</guid>
+      <guid>http://localhost:1313/posts/image_reconstruction_by_lm-mlem_analytical_method/</guid>
       <description>Litterature: Mainly based on:
 Voichita Maxim et al (2016) Probabilistic models and numerical calculation of system matrix and sensitivity in list-mode MLEM 3D reconstruction of Compton camera images Phys.Med.Biol. 61 243
 Uncertainty distribution in measurements
