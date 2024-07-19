@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on plundhammar</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://plundhammar.github.io/tags/</link>
     <description>Recent content in Tags on plundhammar</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jul 2024 16:01:28 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://plundhammar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Analytical Methods</title>
-      <link>http://localhost:1313/tags/analytical-methods/</link>
+      <link>https://plundhammar.github.io/tags/analytical-methods/</link>
       <pubDate>Fri, 12 Jul 2024 16:01:28 +0200</pubDate>
-      <guid>http://localhost:1313/tags/analytical-methods/</guid>
+      <guid>https://plundhammar.github.io/tags/analytical-methods/</guid>
       <description></description>
     </item>
     <item>
       <title>Cone-Surface Projection</title>
-      <link>http://localhost:1313/tags/cone-surface-projection/</link>
+      <link>https://plundhammar.github.io/tags/cone-surface-projection/</link>
       <pubDate>Fri, 12 Jul 2024 16:01:28 +0200</pubDate>
-      <guid>http://localhost:1313/tags/cone-surface-projection/</guid>
+      <guid>https://plundhammar.github.io/tags/cone-surface-projection/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Reconstruction</title>
-      <link>http://localhost:1313/tags/image-reconstruction/</link>
+      <link>https://plundhammar.github.io/tags/image-reconstruction/</link>
       <pubDate>Fri, 12 Jul 2024 16:01:28 +0200</pubDate>
-      <guid>http://localhost:1313/tags/image-reconstruction/</guid>
+      <guid>https://plundhammar.github.io/tags/image-reconstruction/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://plundhammar.github.io/tags/python/</link>
       <pubDate>Fri, 12 Jul 2024 16:01:28 +0200</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://plundhammar.github.io/tags/python/</guid>
       <description></description>
     </item>
   </channel>
