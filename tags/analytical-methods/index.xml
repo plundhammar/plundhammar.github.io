@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Analytical Methods on plundhammar</title>
-    <link>https://plundhammar.github.io/tags/analytical-methods/</link>
+    <link>http://localhost:1313/tags/analytical-methods/</link>
     <description>Recent content in Analytical Methods on plundhammar</description>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.129.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jul 2024 16:01:28 +0200</lastBuildDate>
-    <atom:link href="https://plundhammar.github.io/tags/analytical-methods/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/analytical-methods/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cone-Surface Projections</title>
-      <link>https://plundhammar.github.io/posts/cone-surface_projections/</link>
+      <link>http://localhost:1313/posts/cone-surface_projections/</link>
       <pubDate>Fri, 12 Jul 2024 16:01:28 +0200</pubDate>
-      <guid>https://plundhammar.github.io/posts/cone-surface_projections/</guid>
+      <guid>http://localhost:1313/posts/cone-surface_projections/</guid>
       <description>One of the first properties encountered in Compton camera image reconstruction is the cone-surface projection. Understandig the properties of this geometrical object will set the ground works for understanding more advanced models.
 I was reading some articles of the early versions of the Compton camera image reconstruction procedure when I came across Ref.[1] talking about the cone-surface projections. They investigated a primitive version of a &amp;lsquo;&amp;lsquo;Compton camera&amp;rsquo;&amp;rsquo;. Well, it kind of had some properties like a Compton camera like a scatterer and an absorber but they assumed that photons only scatter at a fixed given angle.</description>
     </item>
