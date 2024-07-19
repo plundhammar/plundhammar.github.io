@@ -6,8 +6,17 @@
     <description>Recent content in Image Reconstruction on plundhammar</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jul 2024 16:01:28 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2024 13:23:18 +0200</lastBuildDate>
     <atom:link href="https://plundhammar.github.io/tags/image-reconstruction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deconvolution and the System Matrix</title>
+      <link>https://plundhammar.github.io/posts/deconvolution_and_the_system_matrix/</link>
+      <pubDate>Fri, 19 Jul 2024 13:23:18 +0200</pubDate>
+      <guid>https://plundhammar.github.io/posts/deconvolution_and_the_system_matrix/</guid>
+      <description>Delving into the practicalities of the inverse problem of reconstructing Compton camera images will lead you to Legandre polynomials or Maximum Likelihood methods, most likely.
+Since last week I have been interested in both the analytical reconstruction techniques as well as some of the iterative methods.
+Regarding iterative methods, what I found is that it is difficult to get a feeling on how the iterative methods properly work simply because the algorithms (I write mine in Python) is incredibly slow.</description>
+    </item>
     <item>
       <title>Cone-Surface Projections</title>
       <link>https://plundhammar.github.io/posts/cone-surface_projections/</link>
