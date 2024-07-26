@@ -6,22 +6,46 @@
     <description>Recent content in Posts on plundhammar</description>
     <generator>Hugo -- 0.129.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2024 13:23:18 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2024 00:40:04 -0900</lastBuildDate>
     <atom:link href="https://plundhammar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>`Compton_MLEM`, A GPU-Based Image Reconstruction Application in CUDA</title>
+      <link>https://plundhammar.github.io/posts/compton_mlem-a-gpu-based-image-reconstruction-application-in-cuda/</link>
+      <pubDate>Fri, 26 Jul 2024 00:40:04 -0900</pubDate>
+      <guid>https://plundhammar.github.io/posts/compton_mlem-a-gpu-based-image-reconstruction-application-in-cuda/</guid>
+      <description>In this post I want to try to reconstruct an image from the simulated data in the previous post. Supposedly the original source consists of two point sources close together around z= -0.5 cm. However, I found it hard to understand the properties of the reconstruction. I will need to redo this simulation with full a priori information about the simulated source.
+So, I have looked into the reconstruction application Compton_MLEM by Matt Leigh, Ref.</description>
+    </item>
+    <item>
+      <title>Properties of List-Mode data from a Compton Camera</title>
+      <link>https://plundhammar.github.io/posts/properties-of-list-mode-data-of-a-compton-camera/</link>
+      <pubDate>Fri, 26 Jul 2024 00:40:04 -0800</pubDate>
+      <guid>https://plundhammar.github.io/posts/properties-of-list-mode-data-of-a-compton-camera/</guid>
+      <description>The energies of a Compton scatter chain are correlated through the Compton scattering equation as well as the Klein-Nishina distribution. This means that some vital statistics must exist, and perhaps be possible to calculate in closed expression. In this post I wanted to give it a try and compare it to some simulated data.
+I recently got a hold on some simulated list-mode data of photons interacting with a silicon volume.</description>
+    </item>
+    <item>
+      <title>Understanding the System Matrix and the LM-MLEM Algorithm</title>
+      <link>https://plundhammar.github.io/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</link>
+      <pubDate>Fri, 26 Jul 2024 00:40:04 -0700</pubDate>
+      <guid>https://plundhammar.github.io/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</guid>
+      <description>The List-Mode Maximum Likelihood Expectation Maximization (LM-MLEM) algorithm is widely used in Compton camera reconstruction. It&amp;rsquo;s well suited for the list-mode data architecture and easy to parallelize. This post will be somewhat technical and a sort of summary of the main arguments found in the litterature.
+The problem has been stated many times, Ref.[1-8]. I will state it as follows (I will use the same notation as in Ref.[8]), and the proof of it will be the subject of a future post:</description>
+    </item>
+    <item>
       <title>Deconvolution and the System Matrix</title>
-      <link>https://plundhammar.github.io/posts/deconvolution_and_the_system_matrix/</link>
-      <pubDate>Fri, 19 Jul 2024 13:23:18 +0200</pubDate>
-      <guid>https://plundhammar.github.io/posts/deconvolution_and_the_system_matrix/</guid>
+      <link>https://plundhammar.github.io/posts/deconvolution-and-system-matrices/</link>
+      <pubDate>Fri, 19 Jul 2024 00:40:04 -0700</pubDate>
+      <guid>https://plundhammar.github.io/posts/deconvolution-and-system-matrices/</guid>
       <description>Delving into the practicalities of the inverse problem of reconstructing Compton camera images will lead you to Legandre polynomials or Maximum Likelihood methods, most likely.
 Since last week I have been interested in both the analytical reconstruction techniques as well as some of the iterative methods.
-Regarding iterative methods, what I found is that it is difficult to get a feeling on how the iterative methods properly work simply because the algorithms (I write mine in Python) is incredibly slow.</description>
+Regarding iterative methods, what I found is that it is difficult to get a feeling on how the iterative methods properly work simply because the algorithms (I write mine in Python) is increadibly slow.</description>
     </item>
     <item>
       <title>Cone-Surface Projections</title>
-      <link>https://plundhammar.github.io/posts/cone-surface_projections/</link>
-      <pubDate>Fri, 12 Jul 2024 16:01:28 +0200</pubDate>
-      <guid>https://plundhammar.github.io/posts/cone-surface_projections/</guid>
+      <link>https://plundhammar.github.io/posts/cone-surface-projection-in-practice/</link>
+      <pubDate>Fri, 12 Jul 2024 00:40:04 -0700</pubDate>
+      <guid>https://plundhammar.github.io/posts/cone-surface-projection-in-practice/</guid>
       <description>One of the first properties encountered in Compton camera image reconstruction is the cone-surface projection. Understandig the properties of this geometrical object will set the ground works for understanding more advanced models.
 I was reading some articles of the early versions of the Compton camera image reconstruction procedure when I came across Ref.[1] talking about the cone-surface projections. They investigated a primitive version of a &amp;lsquo;&amp;lsquo;Compton camera&amp;rsquo;&amp;rsquo;. Well, it kind of had some properties like a Compton camera like a scatterer and an absorber but they assumed that photons only scatter at a fixed given angle.</description>
     </item>

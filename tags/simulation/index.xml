@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Simulation on plundhammar</title>
+    <link>https://plundhammar.github.io/tags/simulation/</link>
+    <description>Recent content in Simulation on plundhammar</description>
+    <generator>Hugo -- 0.129.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jul 2024 00:40:04 -0900</lastBuildDate>
+    <atom:link href="https://plundhammar.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>`Compton_MLEM`, A GPU-Based Image Reconstruction Application in CUDA</title>
+      <link>https://plundhammar.github.io/posts/compton_mlem-a-gpu-based-image-reconstruction-application-in-cuda/</link>
+      <pubDate>Fri, 26 Jul 2024 00:40:04 -0900</pubDate>
+      <guid>https://plundhammar.github.io/posts/compton_mlem-a-gpu-based-image-reconstruction-application-in-cuda/</guid>
+      <description>In this post I want to try to reconstruct an image from the simulated data in the previous post. Supposedly the original source consists of two point sources close together around z= -0.5 cm. However, I found it hard to understand the properties of the reconstruction. I will need to redo this simulation with full a priori information about the simulated source.
+So, I have looked into the reconstruction application Compton_MLEM by Matt Leigh, Ref.</description>
+    </item>
+  </channel>
+</rss>
