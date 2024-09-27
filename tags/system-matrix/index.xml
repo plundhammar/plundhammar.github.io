@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>System Matrix on plundhammar</title>
-    <link>http://localhost:1313/tags/system-matrix/</link>
+    <link>https://plundhammar.github.io/tags/system-matrix/</link>
     <description>Recent content in System Matrix on plundhammar</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Jul 2024 00:40:04 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/system-matrix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://plundhammar.github.io/tags/system-matrix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding the System Matrix and the LM-MLEM Algorithm</title>
-      <link>http://localhost:1313/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</link>
+      <link>https://plundhammar.github.io/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</link>
       <pubDate>Fri, 26 Jul 2024 00:40:04 -0700</pubDate>
-      <guid>http://localhost:1313/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</guid>
+      <guid>https://plundhammar.github.io/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</guid>
       <description>&lt;p&gt;&lt;strong&gt;The List-Mode Maximum Likelihood Expectation Maximization (LM-MLEM) algorithm is widely used in Compton camera reconstruction. It&amp;rsquo;s well suited for the list-mode data architecture and easy to parallelize. This post will be somewhat technical and a sort of summary of the main arguments found in the litterature.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The problem has been stated many times, Ref.[1-8]. I will state it as follows (I will use the same notation as in Ref.[8]), and the proof of it will be the subject of a future post:&lt;/p&gt;</description>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Propapility on plundhammar</title>
-    <link>http://localhost:1313/tags/propapility/</link>
+    <link>https://plundhammar.github.io/tags/propapility/</link>
     <description>Recent content in Propapility on plundhammar</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Jul 2024 00:40:04 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/propapility/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://plundhammar.github.io/tags/propapility/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Properties of List-Mode data from a Compton Camera</title>
-      <link>http://localhost:1313/posts/properties-of-list-mode-data-of-a-compton-camera/</link>
+      <link>https://plundhammar.github.io/posts/properties-of-list-mode-data-of-a-compton-camera/</link>
       <pubDate>Fri, 26 Jul 2024 00:40:04 -0800</pubDate>
-      <guid>http://localhost:1313/posts/properties-of-list-mode-data-of-a-compton-camera/</guid>
+      <guid>https://plundhammar.github.io/posts/properties-of-list-mode-data-of-a-compton-camera/</guid>
       <description>&lt;p&gt;&lt;strong&gt;The energies of a Compton scatter chain are correlated through the Compton scattering equation as well as the Klein-Nishina distribution. This means that some vital statistics must exist, and perhaps be possible to calculate in closed expression. In this post I wanted to give it a try and compare it to some simulated data.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I recently got a hold on some simulated list-mode data of photons interacting with a silicon volume. That is, a list
 $$

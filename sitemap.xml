@@ -2,73 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://plundhammar.github.io/</loc>
     <lastmod>2024-09-27T16:02:27+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://plundhammar.github.io/posts/</loc>
     <lastmod>2024-09-27T16:02:27+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sequential_networks/</loc>
+    <loc>https://plundhammar.github.io/posts/sequential_networks/</loc>
     <lastmod>2024-09-27T16:02:27+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/compton_mlem-a-gpu-based-image-reconstruction-application-in-cuda/</loc>
+    <loc>https://plundhammar.github.io/posts/compton_mlem-a-gpu-based-image-reconstruction-application-in-cuda/</loc>
     <lastmod>2024-07-26T00:40:04-09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cuda/</loc>
+    <loc>https://plundhammar.github.io/tags/cuda/</loc>
     <lastmod>2024-07-26T00:40:04-09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lm-mlem/</loc>
+    <loc>https://plundhammar.github.io/tags/lm-mlem/</loc>
     <lastmod>2024-07-26T00:40:04-09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/simulation/</loc>
+    <loc>https://plundhammar.github.io/tags/simulation/</loc>
     <lastmod>2024-07-26T00:40:04-09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://plundhammar.github.io/tags/</loc>
     <lastmod>2024-07-26T00:40:04-09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/analytical-methods/</loc>
+    <loc>https://plundhammar.github.io/tags/analytical-methods/</loc>
     <lastmod>2024-07-26T00:40:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/compton-scattering/</loc>
+    <loc>https://plundhammar.github.io/tags/compton-scattering/</loc>
     <lastmod>2024-07-26T00:40:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/propapility/</loc>
+    <loc>https://plundhammar.github.io/tags/propapility/</loc>
     <lastmod>2024-07-26T00:40:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/properties-of-list-mode-data-of-a-compton-camera/</loc>
+    <loc>https://plundhammar.github.io/posts/properties-of-list-mode-data-of-a-compton-camera/</loc>
     <lastmod>2024-07-26T00:40:04-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/image-reconstruction/</loc>
+    <loc>https://plundhammar.github.io/tags/image-reconstruction/</loc>
     <lastmod>2024-07-26T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/system-matrix/</loc>
+    <loc>https://plundhammar.github.io/tags/system-matrix/</loc>
     <lastmod>2024-07-26T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</loc>
+    <loc>https://plundhammar.github.io/posts/understanding-the-system-matrix-and-the-lm-mlem-algorithm/</loc>
     <lastmod>2024-07-26T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/deconvolution/</loc>
+    <loc>https://plundhammar.github.io/tags/deconvolution/</loc>
     <lastmod>2024-07-19T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/deconvolution-and-system-matrices/</loc>
+    <loc>https://plundhammar.github.io/posts/deconvolution-and-system-matrices/</loc>
     <lastmod>2024-07-19T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/analytical-method/</loc>
+    <loc>https://plundhammar.github.io/tags/analytical-method/</loc>
     <lastmod>2024-07-12T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cone-surface-projection/</loc>
+    <loc>https://plundhammar.github.io/tags/cone-surface-projection/</loc>
     <lastmod>2024-07-12T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/cone-surface-projection-in-practice/</loc>
+    <loc>https://plundhammar.github.io/posts/cone-surface-projection-in-practice/</loc>
     <lastmod>2024-07-12T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://plundhammar.github.io/tags/python/</loc>
     <lastmod>2024-07-12T00:40:04-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://plundhammar.github.io/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://plundhammar.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://plundhammar.github.io/search/</loc>
   </url>
 </urlset>

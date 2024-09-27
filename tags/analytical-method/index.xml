@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Analytical Method on plundhammar</title>
-    <link>http://localhost:1313/tags/analytical-method/</link>
+    <link>https://plundhammar.github.io/tags/analytical-method/</link>
     <description>Recent content in Analytical Method on plundhammar</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jul 2024 00:40:04 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/analytical-method/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://plundhammar.github.io/tags/analytical-method/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cone-Surface Projections</title>
-      <link>http://localhost:1313/posts/cone-surface-projection-in-practice/</link>
+      <link>https://plundhammar.github.io/posts/cone-surface-projection-in-practice/</link>
       <pubDate>Fri, 12 Jul 2024 00:40:04 -0700</pubDate>
-      <guid>http://localhost:1313/posts/cone-surface-projection-in-practice/</guid>
+      <guid>https://plundhammar.github.io/posts/cone-surface-projection-in-practice/</guid>
       <description>&lt;p&gt;&lt;strong&gt;One of the first properties encountered in Compton camera image reconstruction is the cone-surface projection. Understandig the properties of this geometrical object will set the ground works for understanding more advanced models.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I was reading some articles of the early versions of the Compton camera image reconstruction procedure when I came across Ref.[1] talking about the &lt;em&gt;cone-surface projections&lt;/em&gt;. They investigated a primitive version of a &amp;lsquo;&amp;lsquo;Compton camera&amp;rsquo;&amp;rsquo;. Well, it kind of had some properties like a Compton camera like a scatterer and an absorber but they assumed that photons only scatter at a fixed given angle. This camera measures the cone-surface projection of a source. What this means is that the intensity measured at a given detector is proportional to the integral over the intersection of the cone and the source, given that the source is homogeneous.  Specifically, let $f(\mathbf{x})$ denote the source distribution, $\mathbf{k}$ the cone axis making angle $\beta$ with $\mathbf{n}$ along the cone surface, they defined&lt;/p&gt;</description>
     </item>
